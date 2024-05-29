@@ -7,7 +7,7 @@ import { Home } from "./Pages/Home/home";
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <AppLayout />,
+    element: <AppLayout/>,
     errorElement: <NotFound />,
     children: [
       { path: '/', element: <Home /> },
