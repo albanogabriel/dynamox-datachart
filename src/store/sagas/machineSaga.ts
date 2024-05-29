@@ -2,7 +2,7 @@ import { call, put, takeEvery } from 'redux-saga/effects'
 import { getMachineDataSuccess, MachineItem } from '../slices/machineSlice';
 
 function* workGetMeasuresFetch(){
-  const response: Response = yield call(() => fetch('http://localhost:3333/machine'));
+  const response: Response = yield call(() => fetch('https://json-server-dynamox.vercel.app/machine'));
   const formattedResponse: MachineItem[] = yield response.json(); // Convertendo a resposta para JSON
   yield put(getMachineDataSuccess(formattedResponse))
 }

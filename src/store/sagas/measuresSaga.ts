@@ -3,7 +3,7 @@ import { getMeasuresSuccess } from '../slices/measuresSlice'
 import { Measure } from '../../@types/types';
 
 function* workGetMeasuresFetch(){
-  const response: Response = yield call(() => fetch('http://localhost:3333/data'));
+  const response: Response = yield call(() => fetch('https://json-server-dynamox.vercel.app/data'));
   const formattedResponse: Measure[] = yield response.json(); // Convertendo a resposta para JSON
   yield put(getMeasuresSuccess(formattedResponse))
 }
